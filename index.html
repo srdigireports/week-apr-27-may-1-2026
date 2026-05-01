@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly SEO & Dev Report — April 27 – May 1, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c1220;--ink-soft:#3d4a5c;--ink-muted:#8896a7;--surface:#f6f7f9;--card:#fff;--accent:#2e5bff;--accent-glow:rgba(46,91,255,.12);--green:#0d9f6e;--green-bg:#eafaf3;--amber:#cf8a00;--amber-bg:#fff8e6;--blue-bg:#eef3ff;--purple:#7c3aed;--purple-bg:#f3eeff;--red:#dc2626;--red-bg:#fef2f2;--border:#e4e8ee;--border-active:#2e5bff;--radius:16px;--radius-sm:10px;--shadow-sm:0 1px 3px rgba(12,18,32,.04);--shadow-md:0 4px 24px rgba(12,18,32,.07);--shadow-lg:0 12px 48px rgba(12,18,32,.10);--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideDown{from{opacity:0;max-height:0}to{opacity:1;max-height:800px}}.fade-up{animation:fadeUp .6s cubic-bezier(.22,1,.36,1) both}.delay-1{animation-delay:.08s}.delay-2{animation-delay:.16s}.delay-3{animation-delay:.24s}.delay-4{animation-delay:.32s}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+.hero{background:linear-gradient(145deg,#0c1220 0%,#162038 40%,#1e3060 100%);padding:56px 0 48px;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none}.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(46,91,255,.08)0%,transparent 70%);top:-200px;right:-100px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}.hero-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.2em;margin-bottom:12px}.hero h1{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em}.hero h1 span{background:linear-gradient(135deg,#6b9aff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-date{font-size:15px;color:rgba(255,255,255,.5);margin-top:12px;font-weight:400}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap}.hero-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 24px;text-align:center;backdrop-filter:blur(8px);min-width:100px;transition:transform .3s,border-color .3s}.hero-stat:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.2)}.hero-stat-val{font-family:var(--font-display);font-size:30px;font-weight:800;line-height:1}.hero-stat-val.green{color:#34d399}.hero-stat-val.blue{color:#60a5fa}.hero-stat-val.amber{color:#fbbf24}.hero-stat-val.purple{color:#c084fc}.hero-stat-label{font-size:10px;color:rgba(255,255,255,.45);font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+.toolbar{padding:24px 0 0;position:sticky;top:0;z-index:100;background:var(--surface)}.toolbar::after{content:'';position:absolute;bottom:-20px;left:0;right:0;height:20px;background:linear-gradient(to bottom,var(--surface),transparent);pointer-events:none}
+.hotel-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.hotel-btn{padding:7px 18px;border-radius:100px;border:1.5px solid var(--border);background:var(--card);color:var(--ink-soft);font-family:var(--font-body);font-size:12px;font-weight:600;cursor:pointer;transition:all .25s}.hotel-btn:hover{border-color:var(--accent);color:var(--accent)}.hotel-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(46,91,255,.25)}
+.tab-bar{display:flex;gap:4px;background:#ebeef2;border-radius:14px;padding:4px;margin-bottom:24px}.tab-btn{flex:1;padding:13px 8px;border-radius:11px;border:none;background:transparent;font-family:var(--font-body);font-size:12px;font-weight:700;color:var(--ink-muted);cursor:pointer;transition:all .3s;white-space:nowrap}.tab-btn:hover{color:var(--ink-soft)}.tab-btn.active{background:var(--card);color:var(--ink);box-shadow:var(--shadow-sm)}
+.section{display:none;padding-bottom:40px}.section.active{display:block;animation:fadeIn .35s ease}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:32px}.stat-card{text-align:center;padding:24px 16px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);transition:transform .3s,box-shadow .3s}.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}.stat-card-val{font-family:var(--font-display);font-size:34px;font-weight:800;line-height:1}.stat-card-val.purple{color:#7c3aed}.stat-card-val.blue{color:var(--accent)}.stat-card-val.green{color:var(--green)}.stat-card-val.amber{color:var(--amber)}.stat-card-val.teal{color:#0891b2}.stat-card-label{font-size:11px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-top:8px}
+.summary-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;margin-bottom:16px;transition:all .3s}.summary-card:hover{box-shadow:var(--shadow-md);border-color:#d0d7e2}.summary-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px}.summary-hotel-info{display:flex;align-items:center;gap:14px}.hotel-avatar{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:18px;color:#fff;flex-shrink:0}.summary-hotel-name{font-family:var(--font-display);font-size:18px;font-weight:700}.summary-hotel-meta{font-size:12px;color:var(--ink-muted);font-weight:500;margin-top:2px}.summary-text{font-size:13.5px;color:var(--ink-soft);line-height:1.75;margin-bottom:20px}
+.wins-box{background:var(--green-bg);border:1px solid #c6f0dc;border-radius:var(--radius-sm);padding:18px 20px}.wins-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}.wins-tags{display:flex;flex-wrap:wrap;gap:6px}.win-tag{padding:5px 14px;background:#fff;border:1px solid #d1fae5;border-radius:8px;font-size:12px;color:#065f46;font-weight:500;transition:all .2s}.win-tag:hover{background:#d1fae5}
+.task-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;transition:all .3s}.task-card.open{border-color:var(--border-active);box-shadow:var(--shadow-md)}.task-card.open.dev-card{border-color:#3b82f6}.task-card.open.design-card{border-color:#7c3aed}
+.task-head{padding:17px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;user-select:none;transition:background .2s}.task-head:hover{background:#fafbfc}.task-head-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0}.task-icon{font-size:20px;flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--accent-glow)}.dev-card .task-icon{background:rgba(59,130,246,.1)}.design-card .task-icon{background:rgba(124,58,237,.1)}.task-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}.task-meta{font-size:11px;color:var(--ink-muted);font-weight:500}
+.task-head-right{display:flex;align-items:center;gap:10px;flex-shrink:0}.chevron{font-size:16px;color:var(--ink-muted);transition:transform .3s;line-height:1}.task-card.open .chevron{transform:rotate(180deg)}
+.task-body{display:none;padding:0 24px 22px;border-top:1px solid #f1f3f6;animation:slideDown .35s ease}.task-card.open .task-body{display:block}.task-body-inner{padding-top:18px}.task-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px}.task-col-label{font-size:10px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.task-col-text{font-size:13px;color:var(--ink-soft);line-height:1.65}
+.task-props{margin-bottom:14px;font-size:12px;color:var(--ink-soft)}.task-props strong{font-size:10px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.task-links-label{font-size:10px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}.task-links{display:flex;flex-wrap:wrap;gap:7px}
+.badge{display:inline-block;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}.badge-green{background:var(--green-bg);color:var(--green)}.badge-amber{background:var(--amber-bg);color:var(--amber)}.badge-blue{background:var(--blue-bg);color:var(--accent)}.badge-complete{display:inline-flex;align-items:center;gap:5px;padding:5px 15px;border-radius:100px;background:var(--green-bg);color:var(--green);font-size:12px;font-weight:700}
+.link-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;background:var(--blue-bg);color:var(--accent);border:1px solid #d4e0ff;border-radius:100px;font-size:11px;font-weight:600;text-decoration:none;transition:all .25s;white-space:nowrap}.link-pill:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px);box-shadow:0 3px 12px rgba(46,91,255,.2)}.link-pill svg{width:12px;height:12px}
+.dev-num{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;flex-shrink:0}.design-num{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;flex-shrink:0}
+/* AIO Forbes Section */
+.aio-banner{background:var(--card);border:1.5px solid #b45309;border-radius:var(--radius);padding:28px 32px;margin-bottom:24px;position:relative;overflow:hidden}.aio-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#b45309,#d97706,#f59e0b)}.aio-banner-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}.aio-banner-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#b45309,#d97706);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0}.aio-banner-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--ink)}.aio-banner-subtitle{font-size:12px;color:var(--ink-muted);font-weight:500}.aio-banner-text{font-size:13.5px;color:var(--ink-soft);line-height:1.75;margin-bottom:20px}
+.forbes-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}.forbes-card{padding:18px 20px;border-radius:12px;border:1px solid var(--border);background:var(--surface);transition:all .25s}.forbes-card:hover{border-color:#b45309;background:#fffbeb}.forbes-card-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:8px}.forbes-star{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:6px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.forbes-star.yes{background:var(--green-bg);color:var(--green)}.forbes-star.no{background:var(--red-bg);color:var(--red)}.forbes-card-detail{font-size:12px;color:var(--ink-muted);line-height:1.5}
+.priority-section{margin-bottom:20px}.priority-title{font-size:13px;font-weight:700;color:var(--red);margin-bottom:12px;display:flex;align-items:center;gap:8px}.priority-grid{display:grid;grid-template-columns:1fr;gap:8px}.priority-item{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border-radius:10px;background:var(--red-bg);border:1px solid #fecaca}.priority-num{width:28px;height:28px;border-radius:8px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0}.priority-text{font-size:12.5px;color:#991b1b;line-height:1.6}.priority-text strong{color:#7f1d1d}
+.aio-reco{font-size:13px;color:var(--ink-soft);line-height:1.7;padding:16px 20px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px}.aio-reco strong{color:var(--ink)}.aio-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.link-pill.gold{background:#fffbeb;color:#92400e;border-color:#fde68a}.link-pill.gold:hover{background:#b45309;color:#fff;border-color:#b45309}
+.footer{text-align:center;padding:40px 0 28px;font-size:12px;color:var(--ink-muted);font-weight:500;border-top:1px solid var(--border);margin-top:20px}
+@media(max-width:700px){.hero{padding:40px 0 36px}.hero-stats{width:100%}.hero-stat{flex:1;min-width:70px;padding:12px 8px}.hero-stat-val{font-size:22px}.task-columns,.forbes-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr}.summary-card{padding:22px 20px}.tab-btn{font-size:10.5px;padding:11px 4px}.hotel-btn{font-size:11px;padding:6px 13px}}
+</style>
+</head>
+<body>
+<section class="hero"><div class="container">
+<div class="hero-inner fade-up"><div>
+<div class="hero-label">Weekly Performance Report</div>
+<h1>SEO & Development<br><span>Task Report</span></h1>
+<div class="hero-date">27 April — 1 May, 2026</div>
+</div>
+<div class="hero-stats">
+<div class="hero-stat fade-up delay-1"><div class="hero-stat-val green" id="heroTotal">21</div><div class="hero-stat-label">Total Tasks</div></div>
+<div class="hero-stat fade-up delay-2"><div class="hero-stat-val blue" id="heroCompleted">18</div><div class="hero-stat-label">Completed</div></div>
+<div class="hero-stat fade-up delay-3"><div class="hero-stat-val purple">6</div><div class="hero-stat-label">Design Tasks</div></div>
+<div class="hero-stat fade-up delay-4"><div class="hero-stat-val amber">8</div><div class="hero-stat-label">Properties</div></div>
+</div></div></div></section>
+
+<div class="toolbar"><div class="container">
+<div class="hotel-filters" id="hotelFilters"></div>
+<div class="tab-bar">
+<button class="tab-btn active" data-tab="summary" onclick="switchTab('summary')">📊 Summary</button>
+<button class="tab-btn" data-tab="seo" onclick="switchTab('seo')">🔍 SEO Tasks</button>
+<button class="tab-btn" data-tab="dev" onclick="switchTab('dev')">💻 Dev Tasks</button>
+<button class="tab-btn" data-tab="design" onclick="switchTab('design')">🎨 Design</button>
+<button class="tab-btn" data-tab="aio" onclick="switchTab('aio')">🏆 AIO — Forbes Audit</button>
+</div></div></div>
+
+<div class="container">
+<div class="section active" id="section-summary"></div>
+<div class="section" id="section-seo"></div>
+<div class="section" id="section-dev"></div>
+<div class="section" id="section-design"></div>
+<div class="section" id="section-aio">
+<div class="aio-banner fade-up">
+<div class="aio-banner-header">
+<div class="aio-banner-icon">🏆</div>
+<div><div class="aio-banner-title">Forbes Travel Guide — Visibility Audit</div>
+<div class="aio-banner-subtitle">Proper Hospitality Portfolio · Star Award & Editorial Analysis</div></div>
+</div>
+<p class="aio-banner-text">This week we completed a comprehensive <strong>Forbes Travel Guide visibility audit</strong> across the Proper Hospitality portfolio. The audit verified Star Award status and destination editorial presence for all properties, and outlined a dual-track Forbes engagement strategy — <strong>Standards & Ratings</strong> (for Star Awards) + <strong>Editorial</strong> (for destination guide features) — for the PR team's consideration.</p>
+
+<div class="forbes-grid">
+<div class="forbes-card">
+<div class="forbes-card-name">Downtown LA Proper <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed in Forbes Star Ratings. Los Angeles destination guide exists but DTLA Proper is not featured editorially.</div>
+</div>
+<div class="forbes-card">
+<div class="forbes-card-name">Santa Monica Proper <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed. Santa Monica/LA guide coverage exists but SMP is absent from editorial recommendations.</div>
+</div>
+<div class="forbes-card">
+<div class="forbes-card-name">Austin Proper <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed. Austin destination guide exists but Austin Proper is not featured editorially.</div>
+</div>
+<div class="forbes-card">
+<div class="forbes-card-name">San Francisco Proper <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed. SF destination guide coverage exists but SFP is absent from editorial features.</div>
+</div>
+<div class="forbes-card">
+<div class="forbes-card-name">Shelborne Miami Beach <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed. Miami Beach is a high-coverage Forbes destination but Shelborne is not featured.</div>
+</div>
+<div class="forbes-card">
+<div class="forbes-card-name">Montauk Yacht Club <span class="forbes-star no">No Star Award</span></div>
+<div class="forbes-card-detail">Not currently listed. Hamptons/Montauk destination coverage is limited — editorial opportunity exists.</div>
+</div>
+</div>
+
+<div class="priority-section">
+<div class="priority-title">🚨 Major Concerns — Priority View</div>
+<div class="priority-grid">
+<div class="priority-item"><div class="priority-num">1</div><div class="priority-text"><strong>Zero Forbes Star Awards across the entire portfolio.</strong> None of the six properties currently hold a Forbes Star Rating — a significant gap given the portfolio's luxury/boutique positioning and competitive set.</div></div>
+<div class="priority-item"><div class="priority-num">2</div><div class="priority-text"><strong>No editorial features in Forbes destination guides.</strong> Despite Forbes covering all key markets (LA, Austin, SF, Miami Beach), none of the Proper properties appear in editorial "best hotel" recommendations — a missed visibility and credibility opportunity.</div></div>
+<div class="priority-item"><div class="priority-num">3</div><div class="priority-text"><strong>Competitor advantage growing.</strong> Competing luxury boutique hotels in these markets are actively pursuing and earning Forbes Star Awards and editorial placements, strengthening their positioning in AI search results and high-intent travel discovery.</div></div>
+<div class="priority-item"><div class="priority-num">4</div><div class="priority-text"><strong>AI/LLM citation impact.</strong> Forbes Travel Guide is a high-authority source frequently cited by AI search engines (ChatGPT, Perplexity, Gemini). Absence from Forbes means missing citations in LLM-generated hotel recommendations — directly impacting AIO visibility.</div></div>
+</div>
+</div>
+
+<div class="aio-reco">
+<strong>📋 Recommended Dual-Track Engagement:</strong><br><br>
+<strong>Track 1 — Standards & Ratings:</strong> Engage with Forbes Travel Guide's Star Award program. Properties undergo an anonymous inspection evaluating service standards, facilities, and guest experience. Earning a 4-Star or 5-Star rating provides a powerful credibility marker and drives visibility across Forbes' digital ecosystem and AI citations.<br><br>
+<strong>Track 2 — Editorial Outreach:</strong> Pursue editorial features in Forbes' destination guides for LA, Austin, SF, and Miami Beach. These "best hotels in [city]" articles are evergreen content that ranks highly in search and is frequently referenced by LLMs. Getting featured provides sustained organic visibility.<br><br>
+<strong>📈 Impact:</strong> Securing Forbes Star Awards and/or editorial placements would significantly strengthen the portfolio's positioning in both traditional search and AI-generated recommendations, creating a competitive moat that compounds over time.
+<div class="aio-links">
+<a class="link-pill gold" href="https://docs.google.com/document/d/1cB8_CIaNSXTsovfrQklpgkvZMY9_g7BOLO6o0v79wn0/edit?tab=t.0" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9"/></svg> Full Forbes Audit Document</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container"><div class="footer">Weekly Task Report · Prepared by SEO & Dev Team · Week of April 27 – May 1, 2026</div></div>
+
+<script>
+const HOTELS=["All Properties","Hotel June","Proper Hotel","Shelborne","Avalon Hotel","Culver Hotel","Montauk Yacht Club","Ingleside Estate"];
+const HOTEL_COLORS={"Hotel June":"#2e5bff","Proper Hotel":"#7c3aed","Shelborne":"#0891b2","Avalon Hotel":"#dc2626","Culver Hotel":"#059669","Montauk Yacht Club":"#0369a1","Ingleside Estate":"#b45309"};
+
+const SEO_TASKS=[
+{id:1,hotel:"Avalon Hotel",subProperties:["Avalon Palm Springs","Shelborne Miami Beach","Montauk Yacht Club"],source:"Asana",title:"Website Technical Fixes — APS, SMB, MYC",category:"Technical SEO",description:"Reviewed required technical fixes across APS, Shelborne, and MYC — SEO changes and development tasks assessed.",action:"Fixed OG tags and meta tag issues, implemented and updated schema for new pages, revised page information, added LLMs.txt file, and completed necessary design/dev tweaks.",links:[{label:"Avalon PS",url:"https://docs.google.com/spreadsheets/d/1C6ZoQvOROTBOZBnqQbZktNLksqOf3vVa/edit?gid=789194056#gid=789194056"},{label:"Shelborne",url:"https://docs.google.com/spreadsheets/d/1PIZLNYlEw-fO-lqyyFwOCKhAfbIL8d1l/edit?gid=309036697#gid=309036697"},{label:"MYC",url:"https://docs.google.com/spreadsheets/d/1jMMTechNwnaegPeJEcdEoXZNv3PoeO2Q/edit?gid=1643911261#gid=1643911261"}],status:"Implemented"},
+{id:2,hotel:"Montauk Yacht Club",subProperties:["Montauk Yacht Club","Shelborne Miami Beach"],source:"Asana",title:"Alt Text Optimization — MYC & Shelborne",category:"On-Page SEO",description:"Identified images requiring improved, descriptive alt text to enhance usability and accessibility compliance.",action:"Added clear, descriptive alt text with detailed, informative descriptions to improve accessibility and user experience. Shelborne implementation in progress.",links:[{label:"MYC Alt Sheet",url:"https://docs.google.com/spreadsheets/d/1Um9rdioxAnLm4wqcNCYxiQH42q2pwkjKenTIcnEZaz0/edit?gid=833001588#gid=833001588"},{label:"Shelborne Alt Sheet",url:"https://docs.google.com/spreadsheets/d/1Um9rdioxAnLm4wqcNCYxiQH42q2pwkjKenTIcnEZaz0/edit?gid=694250787#gid=694250787"}],status:"In Progress"},
+{id:3,hotel:"Proper Hotel",subProperties:["DTLA","SMP","Austin","Shelborne"],source:"Weekly GMB Task",title:"GMB Weekly Postings Updated",category:"Local SEO",description:"Weekly GMB posts updated across Proper properties and Shelborne for active local presence.",action:"Highlighted ongoing offers and upcoming updates through GMB posts. Tracking performance and insights to optimize further.",links:[{label:"GMB Posting Doc",url:"https://docs.google.com/document/d/1UGv2M4E3CX1ZVnZrm1Pgwf-RV8GqWr48DemIgS8dCeo/edit?tab=t.dukb5edposju"}],status:"Update Posted"},
+{id:4,hotel:"Ingleside Estate",subProperties:["Ingleside Estate","MYC","Culver Hotel","Shelborne","Austin Proper"],source:"Weekly SEO Task",title:"Schema QA and Upgrades — Cross-Portfolio",category:"Technical SEO",description:"Reviewed main pages to identify newly added information, missing details, or incorrect content in schema markups.",action:"All pages reviewed — started creating updated schema with current information, accurate details, and active links for better machine readability.",links:[{label:"Ingleside",url:"https://docs.google.com/document/d/1y1s6IDTFCabjBpw3IGOA_KlXP3XxJ-SzSDrSAavA4Qc/edit?tab=t.1he9oiw2rdr9"},{label:"MYC",url:"https://docs.google.com/document/d/1y1s6IDTFCabjBpw3IGOA_KlXP3XxJ-SzSDrSAavA4Qc/edit?tab=t.ae929hg541cg"},{label:"Culver",url:"https://docs.google.com/document/d/1y1s6IDTFCabjBpw3IGOA_KlXP3XxJ-SzSDrSAavA4Qc/edit?tab=t.vjfm2vqnotqm"},{label:"Shelborne",url:"https://docs.google.com/document/d/1y1s6IDTFCabjBpw3IGOA_KlXP3XxJ-SzSDrSAavA4Qc/edit?tab=t.4ktfxofpcqur#heading=h.4d35cpktesow"},{label:"Austin",url:"https://docs.google.com/document/d/1y1s6IDTFCabjBpw3IGOA_KlXP3XxJ-SzSDrSAavA4Qc/edit?tab=t.g4piou4pnivj"}],status:"Ongoing"},
+];
+
+const DEV_TASKS=[
+{id:1,hotel:"Proper Hotel",source:"Asana",title:"Easter Menu Removal — All Locations",description:"Removed Easter menus from all Proper locations.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1213590089322941/story/1213589179097089?focus=true",status:"Done"},
+{id:2,hotel:"Proper Hotel",source:"Asana",title:"SMP — Zoe Report Press Page Addition",description:"Added new press: The Zoe Report's 2026 Readers' Choice Awards: Best Art Hotels.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1214241139916676/story/1214282015926139?focus=true",status:"Done"},
+{id:3,hotel:"Proper Hotel",source:"Asana",title:"SMP — Capacity Chart PDFs Updated",description:"Updated attached Capacity Chart PDFs across all SMP pages.",link:"https://app.asana.com/1/361605662576941/inbox/1211472688196060/item/1214360208922768/story/1214360575449594?focus=true",status:"Done"},
+{id:4,hotel:"Avalon Hotel",source:"Asana",title:"APS — Chi Chi Happy Hour Date Removed",description:"Removed date from Chi Chi Happy Hour on the APS dining page.",link:"https://app.asana.com/1/361605662576941/project/1211473903610977/task/1214367271863614?focus=true",status:"Done"},
+{id:5,hotel:"Avalon Hotel",source:"Asana",title:"APS — Wellness Reset Added to Spa Page",description:"Added Wellness Reset section to the Estrella Spa page on APS.",link:"https://app.asana.com/1/361605662576941/project/1211473903610977/task/1214400131171253?focus=true",status:"Done"},
+{id:6,hotel:"Avalon Hotel",source:"Asana",title:"APS — Happenings Title Updated",description:"Updated title to 'Weekend Yoga & Pilates' on APS Happenings.",link:"https://app.asana.com/1/361605662576941/project/1211473903610977/task/1214400131171265?focus=true",status:"Done"},
+{id:7,hotel:"Proper Hotel",source:"Asana",title:"SMP — Elle Press Page Addition",description:"Added new Elle press feature to the SMP Press page.",link:"https://app.asana.com/1/361605662576941/project/1211473903610977/task/1214403604283093?focus=true",status:"Done"},
+];
+
+const DESIGN_TASKS=[
+{id:1,hotel:"Hotel June",source:"Design",title:"HJWLA Wedding Page Design — Completed",description:"HJWLA Wedding page design finalized and ready for development.",status:"Done"},
+{id:2,hotel:"Montauk Yacht Club",source:"Dev",title:"MYC Courts Page — Two New Sections Added",description:"Two new sections added to the MYC Courts page on local server.",status:"Done"},
+{id:3,hotel:"Montauk Yacht Club",source:"Dev",title:"MYC Courts Page — New Form Integrated",description:"New form integrated to the MYC Courts page on local server.",status:"Done"},
+{id:4,hotel:"Hotel June",source:"Dev",title:"HJWLA Offers Page — Amendments",description:"Amendments completed on the HJWLA Offers page.",status:"Done"},
+{id:5,hotel:"Shelborne",source:"Dev",title:"Shelborne Offers Page — Image Optimization",description:"Optimized images on the Shelborne Offers page for faster loading.",status:"Done"},
+{id:6,hotel:"All Properties",source:"Dev",title:"Rate Code Updates — All Properties",description:"Working to update rate codes for all properties for this quarter. Expected completion next week.",status:"In Progress"},
+];
+
+const SUMMARY=[
+{hotel:"Hotel June",summary:"HJWLA Wedding page design completed and ready for development. Amendments done on HJWLA Offers page. GMB weekly posts updated.",wins:["Wedding page design finalized — ready for development","Offers page refinements improve conversion flow"],seo:0,dev:0,design:2},
+{hotel:"Proper Hotel",summary:"Forbes Travel Guide visibility audit completed across all Proper properties (DTLA, SMP, AUP, SFP) and Shelborne — Star Award and editorial presence verified with dual-track engagement recommendation. Easter menus removed from all locations. SMP Zoe Report press addition (2026 Readers' Choice — Best Art Hotels). SMP Capacity Chart PDFs updated. SMP Elle press page addition. GMB weekly posts updated. Schema QA ongoing for Austin Proper.",wins:["Forbes audit identifies PR opportunities for Star Award & editorial features","Press page enrichment (Zoe Report + Elle) strengthens brand authority","Capacity chart accuracy supports events conversion","Clean seasonal content with Easter menu removal"],seo:1,dev:4,design:0},
+{hotel:"Shelborne",summary:"Website technical fixes completed — OG tags, meta tags, schema updated, LLMs.txt added. Alt text optimization in progress. Images optimized on Shelborne Offers page. Schema QA ongoing. GMB weekly posts updated.",wins:["Technical SEO strengthened with OG tags, schema, and LLMs.txt","Image accessibility improvements via alt text","Faster Offers page with optimized images","Schema QA ensures rich result accuracy"],seo:2,dev:0,design:1},
+{hotel:"Avalon Hotel",summary:"APS website technical fixes completed — OG tags, schema implemented, LLMs.txt added. Dining page updated (Chi Chi Happy Hour date removed). Wellness Reset section added to Estrella Spa page. Happenings updated (Weekend Yoga & Pilates). GMB weekly posts updated.",wins:["Technical SEO strengthened across APS","Spa enrichment with Wellness Reset drives wellness traffic","Updated events keep content fresh","AI crawlability improved with LLMs.txt"],seo:1,dev:3,design:0},
+{hotel:"Culver Hotel",summary:"Schema QA and upgrades ongoing — reviewing pages for missing or outdated information.",wins:["Schema accuracy maintained for rich result eligibility"],seo:1,dev:0,design:0},
+{hotel:"Montauk Yacht Club",summary:"Website technical fixes completed — OG tags, schema, LLMs.txt added. Alt text optimization completed with descriptive alt tags. Two new sections and a new form added to MYC Courts page (local server). Schema QA ongoing.",wins:["Technical SEO strengthened with schema and LLMs.txt","Accessibility improved with alt text","Courts page enhancements expand booking capability"],seo:2,dev:0,design:2},
+{hotel:"Ingleside Estate",summary:"Schema QA and upgrades ongoing — reviewing pages for missing or outdated content. GMB weekly posts updated.",wins:["Schema QA ensures rich result accuracy","Active GMB presence maintained"],seo:1,dev:0,design:0},
+{hotel:"All Properties",summary:"Rate code updates in progress across all properties for the new quarter — expected completion next week.",wins:["Accurate rate codes ensure correct booking tracking and revenue attribution"],seo:0,dev:0,design:1},
+];
+
+const CATEGORY_ICONS={"Technical SEO":"⚙️","On-Page SEO":"🏷️","Local SEO":"📍","CRO / UX":"🎯","AI SEO":"🤖"};
+const extLink=`<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9"/></svg>`;
+let activeTab="summary",selectedHotel="All Properties";
+
+function badgeHTML(s){if(!s)return'';const l=s.toLowerCase();let c='badge-green';if(l.includes('progress')||l.includes('ongoing'))c='badge-amber';else if(l.includes('analysis'))c='badge-blue';else if(l.includes('posted'))c='badge-green';return`<span class="badge ${c}">${s}</span>`}
+function linkPill(u,l,cls){return`<a class="link-pill ${cls||''}" href="${u}" target="_blank" rel="noopener">${extLink} ${l}</a>`}
+function filter(a){return selectedHotel==="All Properties"?a:a.filter(t=>t.hotel===selectedHotel||t.hotel==="All Properties")}
+
+function renderFilters(){document.getElementById('hotelFilters').innerHTML=HOTELS.map(h=>`<button class="hotel-btn ${h===selectedHotel?'active':''}" onclick="selectHotel('${h}')">${h}</button>`).join('')}
+
+function renderSummary(){
+const data=selectedHotel==="All Properties"?SUMMARY:SUMMARY.filter(s=>s.hotel===selectedHotel);
+const sc=filter(SEO_TASKS).length,dc=filter(DEV_TASKS).length,gc=filter(DESIGN_TASKS).length;
+const comp=filter(SEO_TASKS).filter(t=>["Implemented","Update Posted"].includes(t.status)).length+filter(DEV_TASKS).filter(t=>t.status==="Done").length+filter(DESIGN_TASKS).filter(t=>t.status==="Done").length;
+const total=sc+dc+gc;const pct=total>0?Math.round(comp/total*100):0;
+let h=`<div class="stat-row fade-up">
+<div class="stat-card"><div class="stat-card-val purple">${sc}</div><div class="stat-card-label">SEO Tasks</div></div>
+<div class="stat-card"><div class="stat-card-val blue">${dc}</div><div class="stat-card-label">Dev Tasks</div></div>
+<div class="stat-card"><div class="stat-card-val teal">${gc}</div><div class="stat-card-label">Design</div></div>
+<div class="stat-card"><div class="stat-card-val green">${pct}%</div><div class="stat-card-label">Completion</div></div>
+<div class="stat-card"><div class="stat-card-val amber">${data.length}</div><div class="stat-card-label">Hotels</div></div></div>`;
+data.forEach((s,i)=>{const c=HOTEL_COLORS[s.hotel]||"#2e5bff";const meta=[s.seo&&`${s.seo} SEO`,s.dev&&`${s.dev} Dev`,s.design&&`${s.design} Design`].filter(Boolean).join(' · ')||'Monitoring';
+h+=`<div class="summary-card fade-up delay-${Math.min(i+1,4)}"><div class="summary-header"><div class="summary-hotel-info"><div class="hotel-avatar" style="background:linear-gradient(135deg,${c},${c}aa)">${s.hotel.charAt(0)}</div><div><div class="summary-hotel-name">${s.hotel}</div><div class="summary-hotel-meta">${meta} this week</div></div></div><div class="badge-complete">✓ Completed</div></div><p class="summary-text">${s.summary}</p><div class="wins-box"><div class="wins-label">🏆 Expected Key Wins</div><div class="wins-tags">${s.wins.map(w=>`<span class="win-tag">${w}</span>`).join('')}</div></div></div>`;});
+document.getElementById('section-summary').innerHTML=h;document.getElementById('heroTotal').textContent=total;document.getElementById('heroCompleted').textContent=comp;}
+
+function renderSEO(){
+const tasks=filter(SEO_TASKS);let h='';
+tasks.forEach(t=>{const icon=CATEGORY_ICONS[t.category]||'📋';
+h+=`<div class="task-card" id="seo-${t.id}"><div class="task-head" onclick="toggleTask('seo',${t.id})"><div class="task-head-left"><div class="task-icon">${icon}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · ${t.source} · ${t.category}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner">${t.subProperties?`<div class="task-props"><strong>Properties: </strong>${t.subProperties.join(' · ')}</div>`:''}<div class="task-columns"><div><div class="task-col-label">What Was Found</div><div class="task-col-text">${t.description}</div></div><div><div class="task-col-label">Action Taken</div><div class="task-col-text">${t.action}</div></div></div><div class="task-links-label">Task Sheets & References</div><div class="task-links">${t.links.map(l=>linkPill(l.url,l.label)).join('')}</div></div></div></div>`;});
+document.getElementById('section-seo').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No SEO tasks for this property.</p>';}
+
+function renderDev(){
+const tasks=filter(DEV_TASKS);let h='';
+tasks.forEach(t=>{h+=`<div class="task-card dev-card" id="dev-${t.id}"><div class="task-head" onclick="toggleTask('dev',${t.id})"><div class="task-head-left"><div class="dev-num">${t.id}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · via ${t.source}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner"><p class="task-col-text" style="margin-bottom:14px">${t.description}</p>${t.link?`<div class="task-links">${linkPill(t.link,'View Task')}</div>`:''}</div></div></div>`;});
+document.getElementById('section-dev').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No dev tasks for this property.</p>';}
+
+function renderDesign(){
+const tasks=filter(DESIGN_TASKS);let h='';
+tasks.forEach(t=>{h+=`<div class="task-card design-card" id="design-${t.id}"><div class="task-head" onclick="toggleTask('design',${t.id})"><div class="task-head-left"><div class="design-num">${t.id}</div><div><div class="task-title">${t.title}</div><div class="task-meta">${t.hotel} · via ${t.source}</div></div></div><div class="task-head-right">${badgeHTML(t.status)}<span class="chevron">▾</span></div></div><div class="task-body"><div class="task-body-inner"><p class="task-col-text">${t.description}</p></div></div></div>`;});
+document.getElementById('section-design').innerHTML=h||'<p style="color:var(--ink-muted);text-align:center;padding:40px 0">No design tasks for this property.</p>';}
+
+function switchTab(tab){activeTab=tab;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===`section-${tab}`));}
+function selectHotel(h){selectedHotel=h;renderFilters();renderSummary();renderSEO();renderDev();renderDesign();}
+function toggleTask(p,id){const el=document.getElementById(`${p}-${id}`);const w=el.classList.contains('open');document.querySelectorAll(`#section-${p} .task-card`).forEach(c=>c.classList.remove('open'));if(!w)el.classList.add('open');}
+
+renderFilters();renderSummary();renderSEO();renderDev();renderDesign();
+</script>
+</body>
+</html>
